@@ -1,6 +1,6 @@
 var express = require('express');
 const app = express();
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 app.set('views', 'views');
 app.set('view engine', 'hbs');
@@ -13,4 +13,4 @@ app.get('/', function(request, response) {
 });
 
 app.listen(port);
-console.log('Node server started on port 3000');
+console.log(`Node server started on port ${port}`);
