@@ -1,7 +1,6 @@
 #Script to deploy on the Render cloud platform
 #specifies when this will run ie when a push/pull request is made
 #Point of this is to ensure that code that fails to build will not be deployed to render
-#https://api.render.com/deploy/srv-cj1rq318g3ne7u0pj8ng?key=z0qPnTwMJ9k
 
 name: Node.js CI
 
@@ -22,8 +21,8 @@ jobs:
     - name: Invoke deployment hook
       uses: distributhor/workflow-webhook@v2
       env:
-        webhook_url: "https://api.render.com/deploy/srv-cj1rq318g3ne7u0pj8ng?key=z0qPnTwMJ9k"
-        webhook_secret: "z0qPnTwMJ9k"
+        webhook_url: ${{secrets.DEPLOY_HOOK_URL}}
+        webhook_secret: ${{secrets.DEPLOY_HOOK_KEY}}
 
     - uses: bounceapp/render-action@0.6.0
       with:
