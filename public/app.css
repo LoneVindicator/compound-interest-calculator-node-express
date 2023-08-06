@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+body{
+
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: "Inter";
+}
+
+main { 
+ 
+    background-color: #ffffff;
+    color: white;
+    width: 32vw;
+    margin: 0;
+
+
+}
+
+
+
+
+
+/* ================
+==============
+Header */
+
+
+
+.header-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+    
+
+  
+    height: 8em;
+    margin: 0;
+    background-color: #2A9D8F;
+}
+
+.header-text{
+
+    margin: 0;
+
+    
+}
+
+
+.header-date-text{
+
+    font-size: 1.8em;
+    font-weight: 700;
+    
+}
+
+.header-time-text {
+
+    
+
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+
+
+.hero-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+
+    background-color: rgb(255, 255, 255);
+    padding: 0.5em;
+}
+
+
+
+
+
+
+
+
+/* ====================
+====================
+
+Nav */
+
+.nav-container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    gap:0.4em;
+    
+}
+
+.nav-text {
+
+    margin: 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-text:hover {
+
+    text-decoration: underline;
+    text-decoration-thickness: 0.2em;
+    text-underline-offset: 0.4em;
+    color: #669BBC;
+}
+
+
+
+
+
+
+/* ========================
+=======================
+Data Container  */
+
+.data-container{
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 1em;
+
+    border-radius: 1em 1em 1em 1em;
+
+    background-color: #2A9D8F;
+   
+}
+
+.data-input-text-container{
+
+    width: 60%;
+}
+
+.data-input-container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #E9C46A;
+}
+
+.data-input-title{
+
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.data-input-desc {
+
+    margin: 0;
+    color: black;
+    font-size: 1em;
+}
+
+.data-input-box-container{
+
+    display: flex;
+    align-items: center;
+
+}
+
+.data-input {
+
+    border-radius: 0.4em;
+    border: none;
+    height: 2em;
+    padding-left: 0.8em;
+    background-color: #D9D9D9;
+    font-size: 1em;
+
+}
+
+.data-input:focus{
+
+    background-color: white;
+    outline-style: solid;
+    outline-color: #2A9D8F;
+    outline-width: 0.25em;
+
+}
+
+.data-initial-investment-container{
+
+    border-radius: 0.8em 0.8em 0 0;
+}
+
+.data-time-container{
+
+    border-radius: 0 0 1em 1em;
+}
+
+/* =================
+======================
+
+Buttons  */
+
+.btn-container {
+
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 1em;
+
+    
+}
+
+.btn{
+
+    height: 3em;
+    width: 11em;
+
+    background-color: #2A9D8F;
+    color: white;
+    border: none;
+    border-radius: 0.4em;
+
+    opacity: 1;
+    cursor: pointer;
+
+    font-size: 1em;
+    font-weight: 900;
+
+}
+
+.btn:hover {
+
+    opacity: 0.8;
+}
+

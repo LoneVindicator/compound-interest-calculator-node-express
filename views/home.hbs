@@ -2,15 +2,145 @@
 
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <title>Handlebars at Work</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Handlebars at Work2</title>
+    <link rel="stylesheet" href="/app.css">
 
-    <body>
+</head>
 
-        <img src="img/logo.png">
-        <h1>Hello there, {{name}} 10:14 PM</h1>
-    </body>
+<body>
+
+    <main>
+
+        <section class="header-container">
+
+            <h1 class="header-text header-date-text">Sunday, August 23</h1>
+            <h1 class="header-text header-time-text">6:50 PM</h1>
+
+        </section>
+
+        <section class="hero-container">
+
+            <div class="hero-formula-container">
+
+                <h1 class="hero-formula-text">A = P ( 1 + r/n ) ^ n/t </h1>
+
+            </div>
+
+            <nav class="nav-container">
+
+                <div class="nav-item nav-calculate-item">
+
+                    <p class="nav-text nav-calculate-text">Calculate</p>
+
+                </div>
+
+                <div class="nav-item nav-table-item">
+
+                    <p class="nav-text nav-table-text">Table</p>
+
+                </div>
+
+                <div class="nav-item nav-graph-item">
+
+                    <p class="nav-text nav-graph-text">Graph</p>
+
+                </div>
+            </nav>
+
+
+        </section>
+
+        <section class="data-container">
+
+            <div class="data-input-container data-initial-investment-container">
+
+                <div class="data-input-text-container">
+
+                    <h1 class="data-input-title">P: Initial Investment</h1>
+                    <p class="data-input-desc">The amount of money you have available to invest initially</p>
+                </div>
+
+                <div class="data-input-box-container">
+
+                    <input class="data-input" id="initial-investment-input" type="number"></input>
+
+                </div>
+
+            </div>
+
+            <div class="data-input-container data-interest-rate-container">
+
+                <div class="data-input-text-container">
+
+                    <h1 class="data-input-title">r: Interest Rate</h1>
+                    <p class="data-input-desc">The amount of money you have available to invest initially</p>
+                </div>
+
+                <div class="data-input-box-container">
+
+                    <input class="data-input" id="initial-interest-rate-input" type="number"></input>
+
+                </div>
+
+            </div>
+
+            <div class="data-input-container data-compound-frequency-container">
+
+                <div class="data-input-text-container">
+
+                    <h1 class="data-input-title">n: Compound Frequency</h1>
+                    <p class="data-input-desc">The number of times the interest is compounded within the period</p>
+                </div>
+
+                <div class="data-input-box-container">
+
+                        <select class="data-input" id="initial-compound-frequency-input">
+                            <option value="12">Monthly</option>
+                            <option value="52">Weekly</option>
+                            <option value="26">Bi-weekly</option>
+                        </select>
+         
+
+                </div>
+
+            </div>
+
+            <div class="data-input-container data-time-container">
+
+                <div class="data-input-text-container">
+
+                    <h1 class="data-input-title">t: Time</h1>
+                    <p class="data-input-desc">The number of years the money is invested/borrowed for</p>
+                </div>
+
+                <div class="data-input-box-container">
+
+                    <input class="data-input" id="initial-time-input" type="number"></input>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="btn-container">
+
+
+            <button class="btn calculate-btn">CALCULATE</button>
+
+
+        </div>
+
+
+
+
+    </main>
+
+    <script src="/calc-interest.js"></script>
+
+
+</body>
 
 </html>
