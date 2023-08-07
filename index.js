@@ -12,5 +12,19 @@ app.get('/', function(request, response) {
 
 });
 
+app.get('/table', function(request, response) {
+
+    response.render('table');
+
+});
+
+app.get('/graph', function(request, response) {
+
+    response.render('graph');
+
+});
+
+
+
 app.listen(port);
 console.log(`Node server started on port ${port}`);

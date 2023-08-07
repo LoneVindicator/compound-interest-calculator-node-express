@@ -10,6 +10,10 @@ body{
 }
 
 main { 
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
  
     background-color: #ffffff;
     color: white;
@@ -111,12 +115,22 @@ Nav */
     cursor: pointer;
 }
 
-.nav-text:hover {
+.nav-text:hover, .nav-text-active {
 
     text-decoration: underline;
     text-decoration-thickness: 0.2em;
     text-underline-offset: 0.4em;
     color: #669BBC;
+}
+
+.nav-anchor, .nav-anchor:visited, .nav-anchor:hover, .nav-anchor:focus {
+
+    text-decoration: none;
+    color: inherit;
+    outline: 0;
+    cursor: auto;
+
+
 }
 
 
@@ -205,6 +219,60 @@ Data Container  */
 
     border-radius: 0 0 1em 1em;
 }
+
+/* ================
+=================
+
+Grid Container 
+
+*/
+
+.data-grid-container {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.1em;
+    justify-items: center;
+    padding: 0.5em;
+    background-color:#2A9D8F;
+    border-radius: 1em;
+    
+    
+    font-size: 1.2em;
+    font-weight: 800;
+    
+
+}
+
+.grid-item{
+
+    border:#2A9D8F;
+    border-style: solid;
+    border-width: 0.1em;
+    padding: 0.2em;
+    text-align: center;
+    background-color: #E9C46A;
+    width: 14em;
+
+}
+
+.grid-label {
+
+    background-color: white;
+    color: black;
+}
+
+.grid-item-first {
+    
+    border-radius: 1em 0 0 0;
+
+}
+
+.grid-item-last {
+
+    border-radius: 0 0 1em 0;
+}
+
 
 /* =================
 ======================
