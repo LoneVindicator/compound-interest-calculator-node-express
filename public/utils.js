@@ -151,19 +151,24 @@ function populateGrid(gridClassName, data){
     const container = document.getElementsByClassName(gridClassName)[0];
 
     for (let i = 0; i < data.length; i++) {
+
         const gridItemLeft = document.createElement('div');
         gridItemLeft.classList.add('grid-item');
+        gridItemLeft.classList.add('grid-item-left');
         gridItemLeft.textContent = i;
         container.appendChild(gridItemLeft);
 
         const gridItemRight = document.createElement('div');
         gridItemRight.classList.add('grid-item');
+        gridItemRight.classList.add('grid-item-right');
 
         if (i === data.length - 1) {
             gridItemRight.classList.add('grid-item-last');
+
         }
-        gridItemRight.textContent = data[i].toString();
+        gridItemRight.textContent = parseFloat(data[i]).toLocaleString();
         container.appendChild(gridItemRight);
+
     }
 }
 

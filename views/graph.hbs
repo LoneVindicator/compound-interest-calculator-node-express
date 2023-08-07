@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <title>Compound Interest Calculator</title>
     <link rel="stylesheet" href="/app.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -32,23 +33,29 @@
 
                 <div class="nav-item nav-calculate-item">
 
-                    <a href="/" class="nav-anchor"><p class="nav-text nav-calculate-text">Calculate</p></a>
+                    <a href="/" class="nav-anchor">
+                        <p class="nav-text nav-calculate-text">Calculate</p>
+                    </a>
 
                 </div>
 
                 <div class="nav-item nav-table-item">
 
-                    <a href="/table" class="nav-anchor">  <p class="nav-text nav-table-text">Table</p> </a>
+                    <a href="/table" class="nav-anchor">
+                        <p class="nav-text nav-table-text">Table</p>
+                    </a>
 
-                   
+
 
                 </div>
 
                 <div class="nav-item nav-graph-item">
 
-                    <a href="/graph" class="nav-anchor"> <p class="nav-text nav-graph-text">Graph</p></a>
+                    <a href="/graph" class="nav-anchor">
+                        <p class="nav-text nav-graph-text">Graph</p>
+                    </a>
 
-                   
+
 
                 </div>
             </nav>
@@ -56,20 +63,20 @@
 
         </section>
 
-        <section class="data-container">
+        <section class="data-graph-container">
 
-            <h1>You're in Graph</h1>
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
 
-          
-        
+
 
         </section>
 
 
     </main>
 
-    <script src="/calc-interest.js"></script>
-
+    <script type="module" src="/display-graph.js"></script>
 
 </body>
 
