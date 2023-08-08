@@ -82,11 +82,40 @@ Header */
     align-items: center;
     justify-content: center;
     color: black;
+    gap: 1em;
 
     background-color: rgb(255, 255, 255);
     padding: 0.5em;
 }
 
+.hero-formula-container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    visibility: hidden;
+
+    gap: 0.1em;
+}
+
+.hero-final-balance-text {
+
+    margin: 0;
+}
+
+.final-balance-label {
+
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.final-balance-content {
+
+    font-size: 1.8em;
+    font-weight: 700;
+}
 
 
 
@@ -143,7 +172,7 @@ Nav */
 =======================
 Data Container  */
 
-.data-container{
+.data-container, .data-container-empty{
 
     display: flex;
     flex-direction: column;
@@ -232,9 +261,11 @@ Grid Container
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.1em;
+    row-gap: 0.1em;
+    column-gap: 0.01em;
+   
     justify-items: center;
-    padding: 0.8em;
+    padding: 0.8em 0 0.8em 0;
     background-color:#2A9D8F;
     border-radius: 1em;
     
@@ -282,6 +313,16 @@ Grid Container
     border-radius: 0 0 1em 0;
 }
 
+/* ===============
+================
+
+Chart */
+
+#myChart{
+
+    background-color: white;
+}
+
 
 /* =================
 ======================
@@ -321,3 +362,46 @@ Buttons  */
     opacity: 0.8;
 }
 
+
+/*
+
+================
+============
+
+If Data is Empty*/
+
+.data-container-empty {
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+  
+
+    background-color: #E3E3E3;
+    color: black;
+
+    display: none;
+}
+
+  
+  .data-empty-img {
+  
+    width: 13em;
+   
+  
+  }
+
+
+
+  .data-empty-text{
+
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0.6em
+  }
+
+  .data-empty-title{
+
+    font-size: 2em;
+    font-weight: 700;
+  }

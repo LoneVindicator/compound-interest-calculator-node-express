@@ -1,29 +1,15 @@
-import { getCurrentDateAndTime, setCurrentDateAndTime, setNavActive,  } from './utils.js';
+import { getCurrentDateAndTime, setCurrentDateAndTime, setNavActive, getFromLocalStorage, mapObjectToGraph, populateGraph, setFinalBalance, showContent } from './utils.js';
 
-//Execution
+
 
 const dateAndTime = getCurrentDateAndTime();
+const data = getFromLocalStorage("Data");
+const mappedDataArr = mapObjectToGraph(data.totalAmountPaidPerYear);
 setCurrentDateAndTime(dateAndTime);
 setNavActive();
+showContent(data);
 
+setFinalBalance( data, "final-balance-content", "hero-formula-container");
+populateGraph(mappedDataArr);
 
-const ctx = document.getElementById('myChart');
-
-new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
+//Execution

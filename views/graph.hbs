@@ -7,6 +7,7 @@
     <title>Compound Interest Calculator</title>
     <link rel="stylesheet" href="/app.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
 
 </head>
 
@@ -25,7 +26,8 @@
 
             <div class="hero-formula-container">
 
-                <h1 class="hero-formula-text">A = P ( 1 + r/n ) ^ n/t </h1>
+                <h1 class="hero-final-balance-text final-balance-label">Final Balance</h1>
+                <h1 class="hero-final-balance-text final-balance-content">$ 20, 000</h1>
 
             </div>
 
@@ -63,7 +65,14 @@
 
         </section>
 
-        <section class="data-graph-container">
+        <section class="data-container-empty">
+
+            <h1 class="data-empty-text data-empty-title">No data found!</h1>
+            <img class='data-empty-img' src="/img/robot.png"></img>
+            <p class="data-empty-text">Try adding some via the Calculate Tab</p>
+        </section>
+
+        <section class="data-container data-graph-container">
 
             <div>
                 <canvas id="myChart"></canvas>
@@ -76,8 +85,10 @@
 
     </main>
 
-    <script type="module" src="/display-graph.js"></script>
+
 
 </body>
+
+<script type="module" src="/display-graph.js"></script>
 
 </html>
