@@ -30,8 +30,10 @@ jobs:
         node-version: 16.18
     - name: Install dependencies
       run: npm ci
-    -name: Run test
-     run: npm test
+    - name: Run test
+      run: npm test
+
+
     - uses: bounceapp/render-action@0.6.0
       with:
         render-token: ${{secrets.RENDER_API_KEY}}
