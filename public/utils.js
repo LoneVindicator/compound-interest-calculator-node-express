@@ -45,10 +45,8 @@ function calculateCompoundInterest(principalAmount, annualInterestRate, compound
         totalAmountPaidPerYear.push(amount);
     }
 
-    return {
-        compoundInterest: compoundInterest.toFixed(2),
-        totalAmountPaidPerYear: totalAmountPaidPerYear.map(amount => amount.toFixed(2))
-    };
+    return totalAmountPaidPerYear.map(amount => amount.toFixed(2));
+  
 }
 
 
@@ -130,7 +128,13 @@ function storeToLocalStorage(data, label) {
 }
 
 function getFromLocalStorage(keyName) {
+
+    console.log("getFromLocalStorage() ran!");
     const dataJSON = localStorage.getItem(keyName);
+
+    console.log("getFromLocalStorage() ran!");
+
+  
     
     if (dataJSON === null) {
         return []; // Return an empty array if no data is found in local storage
@@ -202,20 +206,24 @@ function mapObjectToGraph(data){
 
 function setFinalBalance(data, className, parentDivClassName){
 
-    if(data.totalAmountPaidPerYear === undefined || data.totalAmountPaidPerYear === null){
+    const parentDivEl = document.getElementsByClassName(parentDivClassName)[0];
+    console.log(data);
 
-        console.log("Balance not Calculated!")
+    if(data === undefined || data === null || data === NaN || data.length === 0){
+
+        console.log("Balance not Calculated!");
+        parentDivEl.style.visibility = "hidden";
         return;
     }
 
-    const finalBalanceLength = data.totalAmountPaidPerYear.length;
+    const finalBalanceLength = data.length;
     const finalBalanceLastEl = finalBalanceLength -1;
-    const finalBalanceContent = data.totalAmountPaidPerYear[finalBalanceLastEl];
+    const finalBalanceContent = data[finalBalanceLastEl];
 
     const finalBalanceEl = document.getElementsByClassName(className)[0];
     finalBalanceEl.textContent = ` $ ${ (parseFloat(finalBalanceContent)).toLocaleString() }`;
     
-    const parentDivEl = document.getElementsByClassName(parentDivClassName)[0];
+    
     parentDivEl.style.visibility = "visible";
 
 }
@@ -280,12 +288,7 @@ function showContent(data){
 
 }
 
-function clearLocalStorage(){
-
-    localStorage.setItem(null);
-}
-
-//Exports
+// Exporting based on environment
 
 export { 
     getCurrentInputs,
@@ -300,5 +303,5 @@ export {
     setFinalBalance,
     populateGraph,
     showContent,
-    clearLocalStorage,
 }
+

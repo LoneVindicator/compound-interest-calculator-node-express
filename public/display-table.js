@@ -4,12 +4,23 @@ import { getCurrentDateAndTime, setCurrentDateAndTime, setNavActive, populateGri
 
 const dateAndTime = getCurrentDateAndTime();
 const data = getFromLocalStorage("Data");
+const refreshBtn = document.getElementsByClassName("refresh-icon");
 setCurrentDateAndTime(dateAndTime);
 setNavActive();
 showContent(data);
 setFinalBalance( data, "final-balance-content", "hero-formula-container");
 
-populateGrid("data-grid-container", data.totalAmountPaidPerYear);
+populateGrid("data-grid-container", data);
+
+
+//Buttons
+
+refreshBtn[0].addEventListener("click", () => {
+
+    localStorage.clear();
+    location.reload();
+
+})
 
 
 

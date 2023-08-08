@@ -1,11 +1,11 @@
 //Import 
 
-import { getCurrentInputs, calculateCompoundInterest, storeToLocalStorage, setCurrentDateAndTime, getCurrentDateAndTime, setNavActive, getFromLocalStorage, setFinalBalance} from './utils.js';
-
+import { getCurrentInputs, calculateCompoundInterest, storeToLocalStorage, setCurrentDateAndTime, getCurrentDateAndTime, setNavActive, getFromLocalStorage, setFinalBalance } from './utils.js';
 
 //Variable Declaration
 
 const calcCompoundBtn = document.getElementsByClassName("calculate-btn");
+const refreshBtn = document.getElementsByClassName("refresh-icon");
 
 
 
@@ -23,18 +23,23 @@ setNavActive();
 
 setFinalBalance( finalBalance, "final-balance-content", "hero-formula-container");
 
-//Event Listener
+////Buttons
 
 calcCompoundBtn[0].addEventListener("click", () => {
 
     const input = getCurrentInputs();
     const result = calculateCompoundInterest(input.principalAmount, input.annualInterestRate, input.compoundFrequency, input.investmentPeriod);
-    console.log("Compound Interest: $" + result.compoundInterest,);
-    console.log("Amount paid each year: $" + result.totalAmountPaidPerYear);
 
     storeToLocalStorage(result, "Data");
     setFinalBalance( result, "final-balance-content", "hero-formula-container");
 
+
+})
+
+refreshBtn[0].addEventListener("click", () => {
+
+    localStorage.clear();
+    location.reload();
 
 })
 

@@ -4,7 +4,9 @@ import { getCurrentDateAndTime, setCurrentDateAndTime, setNavActive, getFromLoca
 
 const dateAndTime = getCurrentDateAndTime();
 const data = getFromLocalStorage("Data");
-const mappedDataArr = mapObjectToGraph(data.totalAmountPaidPerYear);
+const refreshBtn = document.getElementsByClassName("refresh-icon");
+const mappedDataArr = mapObjectToGraph(data);
+
 setCurrentDateAndTime(dateAndTime);
 setNavActive();
 showContent(data);
@@ -12,4 +14,12 @@ showContent(data);
 setFinalBalance( data, "final-balance-content", "hero-formula-container");
 populateGraph(mappedDataArr);
 
-//Execution
+
+//Buttons
+
+refreshBtn[0].addEventListener("click", () => {
+
+    localStorage.clear();
+    location.reload();
+
+})

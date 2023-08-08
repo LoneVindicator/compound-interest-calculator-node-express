@@ -37,17 +37,41 @@ Header */
 .header-container {
 
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: end;
-    padding-left: 0.5em;
-    padding-bottom: 0.5em;
-    
+    flex-direction: row;
+    justify-content: space-between;
 
-  
     height: 8em;
     margin: 0;
     background-color: #2A9D8F;
+}
+
+.refresh-icon{
+
+    width: 1.5em;
+    border-radius: 50%;
+    padding: 0.5em;
+}
+
+.refresh-icon:hover{
+
+    background-color: #4cbbae;
+}
+
+.header-text-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+    
+}
+
+.header-refresh-icon-container{
+
+    padding: 0.5em;
 }
 
 .header-text{
@@ -162,6 +186,8 @@ Nav */
 
 
 }
+
+
 
 
 
