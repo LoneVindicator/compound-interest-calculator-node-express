@@ -8,13 +8,11 @@ const calcCompoundBtn = document.getElementsByClassName("calculate-btn");
 const refreshBtn = document.getElementsByClassName("refresh-icon");
 
 
-
+// TODO: Add form validation & notifyError()
 
 
 
 //Execution
-
-
 
 const dateAndTime = getCurrentDateAndTime();
 const finalBalance = getFromLocalStorage("Data");
