@@ -444,19 +444,21 @@ main{
 }
   }
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1225px) {
     main{
     
-        width: 70vw;
+        width: 80vw;
     }
       }
-  
-      @media only screen and (max-width: 600px) {
+
+      @media only screen and (max-width: 1000px) {
         main{
         
             width: 100vw;
         }
           }
+      
+  
       
 
 
