@@ -2,7 +2,7 @@
 
 const { remote } = require('webdriverio');
 const assert = require('assert');
-var port = process.env.PORT;
+var port = process.env.PORT || 3000;
 
 
 let browser;
