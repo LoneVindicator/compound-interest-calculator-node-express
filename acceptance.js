@@ -11,9 +11,9 @@ let browser;
     browser = await remote({
         capabilities: {
             browserName: 'edge',
-            'ms:edgeOptions': {
-                args: ['headless'] // Use args to enable headless mode
-            }
+            // 'ms:edgeOptions': {
+            //     args: ['headless'] // Use args to enable headless mode
+            // }
         },
  
     });
