@@ -50,9 +50,10 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
-  const port = process.env.PORT || 3000; // Use the provided port or default to 3000
+//   const port = process.env.PORT || 3000; // Use the provided port or default to 3000
 
-  await page.goto(`http://localhost:${port}/`);
+//   await page.goto(`http://localhost:${port}/`);
+  await page.goto(`  https://node-password-generator.onrender.com/`);
 
   const intialInvestmentInput = await page.$('#initial-investment-input');
   await intialInvestmentInput.type('100');

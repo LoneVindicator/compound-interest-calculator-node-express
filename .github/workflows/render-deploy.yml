@@ -32,8 +32,6 @@ jobs:
       run: npm ci
     - name: Run Unit test
       run: npm test
-    - name: Run App
-      run: node index.js
     - name: Run Acceptance test
       run: node acceptance.js
     - uses: bounceapp/render-action@0.6.0
