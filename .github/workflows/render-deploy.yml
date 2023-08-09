@@ -34,6 +34,8 @@ jobs:
       run: npm test
     - name: Run Acceptance test
       run: node acceptance.js
+      with:
+        edge-version: stable
 
     - uses: bounceapp/render-action@0.6.0
       with:
