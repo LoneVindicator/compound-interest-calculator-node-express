@@ -310,7 +310,7 @@ Grid Container
     padding: 0.2em;
     text-align: center;
     background-color: #e9c56a;
-    width: 14em;
+    width: 80%;
 }
 
 .grid-item-left:hover, .grid-item-left:hover + div{
@@ -431,3 +431,32 @@ If Data is Empty*/
     font-size: 2em;
     font-weight: 700;
   }
+
+  /* ==================
+  ===========================
+  
+  Media Queries */
+
+  @media only screen and (max-width: 1400px) {
+main{
+
+    width: 50vw;
+}
+  }
+
+  @media only screen and (max-width: 1000px) {
+    main{
+    
+        width: 70vw;
+    }
+      }
+  
+      @media only screen and (max-width: 600px) {
+        main{
+        
+            width: 100vw;
+        }
+          }
+      
+
+
