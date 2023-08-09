@@ -8,10 +8,15 @@ var port = process.env.PORT || 3000;
 let browser;
 
 (async () => {
-
-    browser = await remote ( {
-        capabilities: { browserName: 'edge'}
-    })
+    browser = await remote({
+        capabilities: {
+            browserName: 'edge',
+            'ms:edgeOptions': {
+                args: ['headless'] // Use args to enable headless mode
+            }
+        },
+ 
+    });
 
     await browser.navigateTo(`http://localhost:${port}/`)
 
